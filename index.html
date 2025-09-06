@@ -93,15 +93,15 @@
             <div class="w-11/12 mx-auto">
                 <h2 class="font-semibold text-[32px] text-center">Our Impact</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 pt-5">
-                    <div class="bg-white m-10 rounded-xl py-20 transform hover:scale-105 hover:shadow-lg hover:bg-[#e3ffe5] transition-all duration-300">
+                    <div class="bg-white m-10 md:mt-10 md:mx-5 lg:m-10 rounded-xl py-20 transform hover:scale-105 hover:shadow-lg hover:bg-[#e3ffe5] focus:scale-105 focus:shadow-lg focus:bg-[#e3ffe5] active:scale-105 active:shadow-lg active:bg-[#e3ffe5] transition-all duration-300">
                         <h4 class="text-[32px] font-semibold text-center text-[#15803D]">500K+</h4>
                         <p class="text-center font-light">Trees Planted</p>
                     </div>
-                    <div class="bg-white m-10 rounded-xl py-20 transform hover:scale-105 hover:shadow-lg hover:bg-[#e3ffe5] transition-all duration-300">
+                    <div class="bg-white m-10 md:mt-10 md:mx-5 lg:m-10 rounded-xl py-20 transform hover:scale-105 hover:shadow-lg hover:bg-[#e3ffe5] focus:scale-105 focus:shadow-lg focus:bg-[#e3ffe5] active:scale-105 active:shadow-lg active:bg-[#e3ffe5] transition-all duration-300">
                         <h4 class="text-[32px] font-semibold text-center text-[#15803D]">120+</h4>
                         <p class="text-center font-light">Communities Involved</p>
                     </div>
-                    <div class="bg-white m-10 rounded-xl py-20 transform hover:scale-105 hover:shadow-lg hover:bg-[#e3ffe5] transition-all duration-300">
+                    <div class="bg-white m-10 md:mt-10 md:mx-5 lg:m-10 rounded-xl py-20 transform hover:scale-105 hover:shadow-lg hover:bg-[#e3ffe5] focus:scale-105 focus:shadow-lg focus:bg-[#e3ffe5] active:scale-105 active:shadow-lg active:bg-[#e3ffe5] transition-all duration-300">
                         <h4 class="text-[32px] font-semibold text-center text-[#15803D]">30+</h4>
                         <p class="text-center font-light">Countries Reached</p>
                     </div>
@@ -110,6 +110,37 @@
         </section>
 
         <!-- plant a tree section start -->
+        <section class="py-[80px] bg-[#166534]">
+            <div>
+                <h2 class="font-semibold text-[32px] text-center text-white pb-5">Plant a Tree Today</h2>
+                <div class="w-[350px] h-[300px] md:w-[580px] md:h-[300px] lg:w-[580px] lg:h-[300px] m-10 rounded-xl py-9 bg-[#15803d] mx-auto shadow-lg">
+                    <form action="/submit" method="POST" class="flex justify-center items-center flex-col">
+                        <!-- id input -->
+                        <div class="mb-4">
+                            <input type="text" id="userid" name="userid" placeholder="Your Name" required class="w-[280px] md:w-[500px] lg:w-[500px] bg-white px-4 py-2 mt-1 border border-[#a6a4a4] rounded-sm focus:outline-none">
+                        </div>
+
+                        <!-- email input -->
+                        <div class="mb-4">
+                            <input type="email" id="email" name="email" placeholder="Your Email Address" required class="w-[280px] md:w-[500px] lg:w-[500px] bg-white px-4 py-2 mt-1 border border-[#a6a4a4] rounded-sm focus:outline-none">
+                        </div>
+
+                        <!-- select option -->
+                        <select id="options" name="options" class="mt-1 block w-[280px] md:w-[500px] lg:w-[500px] bg-white px-4 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm mb-4" required>
+                            <option value="" selected>Number of Trees</option>
+                            <option value="option1">1 Tree - $5</option>
+                            <option value="option2">5 Tree - $25</option>
+                            <option value="option3">10 Tree - $50</option>
+                        </select>
+
+                        <!-- submit button -->
+                        <button type="submit" class="w-[280px] md:w-[500px] lg:w-[500px] text-[#15803D] bg-[#FACC15] py-2 rounded-[30px] cursor-pointer">
+                            Donate Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
         
     </main>
 
