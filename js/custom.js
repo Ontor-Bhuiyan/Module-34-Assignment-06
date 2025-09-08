@@ -14,10 +14,10 @@ const loadCategory = () => {
 const displayCategory = (categories) => {
     categories.forEach(category => {
         navCategory.innerHTML += `
-            <li class="text-[16px] font-medium py-2 hover:bg-[#15803D] hover:text-white rounded-lg p-2 cursor-pointer" id="${category.id}"><button class="cursor-pointer">${category.category_name}</button></li>
+            <li class="text-[16px] font-medium py-2 hover:bg-[#15803D] hover:text-white rounded-lg p-2 cursor-pointer" id="${category.id}">${category.category_name}</li>
         `;
     });
-    console.log(navCategory)
+    
     navCategory.addEventListener('click', (event) => {
         const allLi = document.querySelectorAll('li');
             allLi.forEach(li => {
@@ -50,8 +50,8 @@ const showTressByCategory = (plants) => {
 
     plants.forEach(plant => {
         treesCategory.innerHTML += `
-            <div class="w-[350px] h-[460px] bg-white rounded-lg">
-                <div>
+            <div class="w-full h-full bg-white rounded-lg">
+                <div class="h-full flex flex-col justify-between">
                     <img class="w-[325px] h-[250px] mx-auto py-3 mx-5" src="${plant.image}" alt="" />
                     <h2 class="text-[14px] font-semibold px-3 pb-3">${plant.name}</h2>
                     <p class="text-[12px] font-normal text-[#1F2937] px-3 pb-3">${plant.description}</p>
@@ -63,7 +63,7 @@ const showTressByCategory = (plants) => {
                         <p class="text-[14px] font-semibold"><span><i class="fa-solid fa-bangladeshi-taka-sign text-[14px] font-normal"></i>${plant.price}</span></p>
                       </div>
                     </div>
-                    <button class="w-[324px] text-white py-2 mx-3 mb-3 bg-[#15803D] rounded-[30px] cursor-pointer">Add to Cart</button>
+                    <button class="w-full text-white py-2 mx-3 mb-3 bg-[#15803D] rounded-[30px] cursor-pointer">Add to Cart</button>
                 </div>
             </div>
         `;
